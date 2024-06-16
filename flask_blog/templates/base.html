@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="bg">
+    <header class="text-center py-4">
+        <h1>Blog</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Domů</a>
+            <a href="{{ url_for('add_entry') }}">Přidat článek</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container text-center mt-5">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+</body>
+</html>
